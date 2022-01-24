@@ -131,7 +131,7 @@ int OpenSocket(){
 }
 
 void CloseSocket(int idx){
-	if (availableSocketClient[idx] ) {
+	if (availableSockClient[idx] ) {
 		close(sockClient[idx]);
 		availableSockClient[idx] = FALSE;
 		FD_CLR(sockClient[idx], &readfds);

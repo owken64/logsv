@@ -3,7 +3,7 @@
 #include "Network.h"
 #include "Log.h"
 #include "Parameter.h"
-#include "BOOL.h"
+#include "Bool.h"
 
 void mainLoop(void){
 
