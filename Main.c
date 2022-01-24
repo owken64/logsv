@@ -3,7 +3,7 @@
 #include "Network.h"
 #include "Log.h"
 #include "Parameter.h"
-
+#include "BOOL.h"
 
 void mainLoop(void){
 
@@ -12,7 +12,7 @@ void mainLoop(void){
 	NetworkInit();
 	
 	// ループ
-	while (true){
+	while (TRUE){
 	
 	  NetworkReceive();
 	

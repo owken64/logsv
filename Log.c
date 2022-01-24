@@ -15,7 +15,7 @@ void CloseLogfile(){
 	fclose(logfile);
 }
 
-void writeLog(char *msg){
+void WriteLog(char *msg){
 	char buf[MSG_LENGTH];
 
 	memcpy(buf, message, sizeof(message));

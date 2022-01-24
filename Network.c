@@ -113,13 +113,13 @@ int OpenSocket(){
 		while((idx < MAX_CONNECTION) && (availableSockClient[idx] == TRUE) ) idx++;
 		if (idx == MAX_CONNECTION ){
 		 perror("Clients are full.");
-		 return NETWORK_CONNECTION_FAILURE;
+		 return NETWORK_CONNECT_FAILURE;
 		}
 		// Accept
 		clitLen = sizeof(sockAddrClient[idx]);
         if ((sockClient[idx] = accept(sockLogsv, (struct sockaddr *) &sockAddrClient[idx], &clitLen)) < 0) {
             perror("accept() failed.");
-            return NETWORK_CONNECTION_FAILURE;
+            return NETWORK_CONNECT_FAILURE;
         }
         availableSockClient[idx] = TRUE;
         

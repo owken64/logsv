@@ -6,4 +6,4 @@
 int OpenLogfile();
 void CloseLogfile();
 
-void writeLog(char *msg);
+void WriteLog(char *msg);

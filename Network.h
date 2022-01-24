@@ -9,4 +9,4 @@
 int NetworkInit();
 void NetworkClose();
 
-void NetworkReceive();
+int NetworkReceive();
