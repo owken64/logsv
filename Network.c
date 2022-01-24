@@ -38,9 +38,14 @@ int NetworkInit(){
 }
 
 void NetworkClose(){
+	// 各クライアントとのソケットをクローズ
 	for(int i = 0; i < MAX_CONNECTION; i++) {
 		CloseSocket(i);
 	}
+	
+	// リッスン用ソケットをクローズ
+	FD_CLR(sockLogsv, &readfds);
+	close(sockLogsv);
 }
 
 int NetworkReceive(){
